@@ -1,0 +1,21 @@
+# dependencies
+node_modules/
+
+# production
+dist/
+
+# env
+.env
+
+# python
+venv/
+__pycache__/
+
+# macOS
+.DS_Store
+
+# uploads
+uploads/
+
+# logs
+*.log
