@@ -2,7 +2,7 @@ import {motion} from 'framer-motion';
 
 const HeroSaction = () => {
     return (
-        <section className='hero'>
+        <section id='home'>
             <div className='hero-grid'>
                 <motion.div
                 initial ={{opacity:0, x:-50}}
@@ -18,7 +18,7 @@ const HeroSaction = () => {
                     <p className='hero-text'>  Building AI-powered systems and modern web applications. </p>
 
                     <div className='flex gap-4'>
-                        <button className='btn-outline'> Contact Me </button>   
+                        <button className='btn-outline glow'> Contact Me </button>   
                     </div>
 
                 </motion.div>
@@ -29,8 +29,8 @@ const HeroSaction = () => {
                 transition={{duration:0.8}}
                 className="flex justify-center"
                 >
-                     <div className="w-80 h-80 rounded-full bg-gradient-to-r from-purple-600 to-cyan-500 p-1">
-                        <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center text-7xl">🚀</div>
+                     <div className="hero-img float">
+                        <div className="hero-inner">🚀</div>
                      </div>
                     </motion.div> 
 
@@ -41,3 +41,4 @@ const HeroSaction = () => {
 }
 
 export default HeroSaction;
+

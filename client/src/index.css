@@ -2,8 +2,8 @@
 @import "@fontsource/inter";
 
 *{
- margin:0;
- padding:0;
+ margin:0px;
+ padding:0px;
  box-sizing:border-box;
 }
 
@@ -16,6 +16,9 @@ body{
  color:white;
  font-family:"Inter",sans-serif;
  overflow-x:hidden;
+ padding: 5px;
+ margin-left: 70px; 
+ /*margin-top: 200px; */
 }
 
 /* Layout */
@@ -29,10 +32,7 @@ body{
 
 .navbar{
     
-@apply fixed top-0 left-0 w-full z-50
- backdrop-blur-md
- bg-white/5
- border-b border-white/10;
+@apply fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-white/5 border-b border-white/10;
 }
 
 .nav-links{
@@ -45,6 +45,13 @@ body{
  transition;
 }
 
+.nav-links{
+ @apply hidden md:flex gap-8 text-gray-300;
+}
+
+.nav-links li a{
+ @apply transition hover:text-cyan-400;
+}
 
 /* Buttons */
 
@@ -83,4 +90,238 @@ body{
 
 .hero-text{
  @apply text-gray-400 leading-8 mb-8 max-w-xl;
+}
+
+/* Hero */
+
+.hero-img{
+ @apply w-80 h-80 rounded-full bg-gradient-to-r from-purple-600 to-cyan-500 p-1;
+}
+
+.hero-inner{
+ @apply w-full h-full rounded-full bg-slate-900 flex items-center justify-center text-7xl;
+}
+
+/* Sections */
+
+.section{
+ @apply py-24;
+}
+
+.section-title{
+ @apply text-4xl font-bold text-center mb-4;
+}
+
+.section-sub{
+ @apply text-gray-400 text-center mb-16;
+}
+
+.section{
+ @apply py-28 px-6;
+}
+
+.section-title{
+ @apply text-5xl font-bold text-center mb-4;
+}
+
+.section-sub{
+ @apply text-gray-400 text-center mb-16;
+}
+
+/* About */
+
+.about-grid{
+ @apply container grid md:grid-cols-2 gap-12 items-center;
+}
+
+.about-card{
+ @apply bg-white/5 border border-white/10
+ rounded-3xl p-8 backdrop-blur-md;
+}
+
+.about-text{
+ @apply text-gray-400 leading-8;
+}
+
+
+/* Skills */
+
+.skills-grid{
+ @apply container grid
+ grid-cols-2
+ md:grid-cols-4
+ gap-6;
+}
+
+.skill-card{
+ @apply bg-white/5
+ border border-white/10
+ rounded-2xl
+ p-6
+ text-center
+ hover:scale-105
+ transition;
+}
+
+/* Projects */
+
+.projects-grid{
+ @apply container grid md:grid-cols-2 gap-8;
+}
+
+.project-card{
+ @apply bg-white/5 border border-white/10 rounded-3xl p-6 transition hover:-translate-y-3 hover:shadow-[0_0_30px_rgba(34,211,238,0.2)];
+}
+
+.project-title{
+ @apply text-2xl font-bold mb-4;
+}
+
+.project-text{
+ @apply text-gray-400 mb-6;
+}
+
+.project-btns{
+ @apply flex gap-4;
+}
+
+/* Buttons */
+
+.btn-primary{
+ @apply px-6 py-3 rounded-xl bg-cyan-400 text-black font-semibold transition hover:scale-105;
+}
+
+.btn-outline{
+ @apply px-6 py-3 rounded-xl border border-cyan-400 text-cyan-400 transition hover:bg-cyan-400 hover:text-black;
+}
+/* Contact */
+
+.contact-box{
+ @apply container max-w-3xl bg-white/5 border border-white/10 rounded-3xl p-8;
+}
+
+.input{
+ @apply w-full bg-transparent border border-white/10 rounded-xl p-4 mb-4 outline-none;
+}
+
+.input:focus{
+ @apply border-cyan-400;
+}
+
+.contact-btn{
+ @apply w-full px-6 py-3 rounded-xl bg-cyan-400 text-black font-semibold transition hover:scale-105;
+}
+
+/* Footer */
+
+.footer{
+ @apply border-t border-white/10 mt-20;
+}
+
+.footer-box{
+ @apply container py-10 grid md:grid-cols-3 items-center gap-6;
+}
+
+.footer-logo{
+ @apply text-3xl font-bold text-cyan-400;
+}
+
+.footer-text{
+ @apply text-gray-400 text-center;
+}
+
+.footer-icons{
+ @apply flex gap-5 text-2xl;
+}
+
+.footer-icon{
+ @apply transition hover:text-cyan-400 hover:-translate-y-1;
+}
+/* Scroll Top */
+
+.scroll-top{
+ @apply fixed bottom-6 right-6 bg-cyan-400 text-black p-4 rounded-full text-xl opacity-0 pointer-events-none transition;
+}
+
+.scroll-top.show{
+ @apply opacity-100 pointer-events-auto;
+}
+
+/* Navbar */
+
+.navbar{
+ @apply fixed top-0 left-0 w-full z-50 bg-[#07152d]/80 backdrop-blur-md border-b border-white/10;
+}
+
+.nav-box{
+ @apply container flex items-center justify-between py-5;
+}
+
+.logo{
+ @apply text-3xl font-bold text-cyan-400;
+}
+
+.resume-btn{
+ @apply hidden md:block px-6 py-3 rounded-full bg-cyan-400 text-black font-semibold transition hover:scale-105;
+}
+
+.menu-icon{
+ @apply md:hidden text-2xl cursor-pointer;
+}
+
+/* Mobile Menu */
+
+.mobile-menu{
+ @apply fixed top-[80px] left-0 w-full bg-[#07152d] flex flex-col items-center gap-6 py-10 translate-x-[-100%] transition;
+}
+
+.mobile-menu a{
+ @apply text-xl text-gray-300 hover:text-cyan-400;
+}
+
+.show-menu{
+ @apply translate-x-0;
+}
+
+/* Glow */
+
+.glow{
+ @apply relative overflow-hidden;
+}
+
+.glow::before{
+ content:"";
+ @apply absolute inset-0 opacity-0 transition;
+ background:linear-gradient(
+ 120deg,
+ transparent,
+ rgba(34,211,238,0.15),
+ transparent
+ );
+}
+
+.glow:hover::before{
+ @apply opacity-100;
+}
+
+/* Float */
+
+.float{
+ animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+
+0%{
+ transform:translateY(0px);
+}
+
+50%{
+ transform:translateY(-20px);
+}
+
+100%{
+ transform:translateY(0px);
+}
+
 }
