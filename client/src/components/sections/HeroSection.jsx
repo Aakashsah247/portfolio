@@ -1,4 +1,6 @@
 import {motion} from 'framer-motion';
+import profile from "/Users/pabansah/portfolio/client/src/assets/aakash.jpeg"
+
 
 const HeroSaction = () => {
     return (
@@ -18,7 +20,7 @@ const HeroSaction = () => {
                     <p className='hero-text'>  Building AI-powered systems and modern web applications. </p>
 
                     <div className='flex gap-4'>
-                        <button className='btn-outline glow'> Contact Me </button>   
+                        <a href="#contact" className='btn-outline glow'> Contact Me</a>
                     </div>
 
                 </motion.div>
@@ -30,7 +32,7 @@ const HeroSaction = () => {
                 className="flex justify-center"
                 >
                      <div className="hero-img float">
-                        <div className="hero-inner">🚀</div>
+                        <img src={profile} alt='Aakash' className='w-full h-full rounded-full object-cover'/>
                      </div>
                     </motion.div> 
 

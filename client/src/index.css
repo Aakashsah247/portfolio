@@ -16,23 +16,18 @@ body{
  color:white;
  font-family:"Inter",sans-serif;
  overflow-x:hidden;
- padding: 5px;
- margin-left: 70px; 
- /*margin-top: 200px; */
+
 }
 
 /* Layout */
 
 .container{
-    @apply mx-auto px-4;
+    @apply max-w-7xl mx-auto px-6;
 }
 
-
 /* Navbar */
-
 .navbar{
-    
-@apply fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-white/5 border-b border-white/10;
+ @apply fixed top-0 left-0 w-full z-50 bg-[#07152d]/80 backdrop-blur-md border-b border-white/10 mx-12;
 }
 
 .nav-links{
@@ -40,44 +35,51 @@ body{
 }
 
 .nav-item{
- @apply hover:text-cyan-400
- cursor-pointer
- transition;
-}
-
-.nav-links{
- @apply hidden md:flex gap-8 text-gray-300;
+ @apply hover:text-cyan-400 cursor-pointer transition;
 }
 
 .nav-links li a{
  @apply transition hover:text-cyan-400;
 }
 
+.nav-box{
+ @apply container flex items-center justify-between py-5;
+}
+
+.logo{
+ @apply text-3xl font-bold text-cyan-400;
+}
+
+.resume-btn{
+ @apply hidden md:block px-6 py-3 rounded-full bg-cyan-400 text-black font-semibold transition hover:scale-105;
+}
+
+.menu-icon{
+ @apply md:hidden text-2xl cursor-pointer;
+}
 /* Buttons */
 
 .btn-primary{
- @apply px-6 py-3 rounded-full
- bg-gradient-to-r
- from-purple-600
- to-cyan-500
- hover:scale-105
- transition;
+ @apply px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-cyan-500 hover:scale-105 transition;
+}
+
+.btn-primary{
+ @apply px-6 py-3 rounded-xl bg-cyan-400 text-black font-semibold transition hover:scale-105;
 }
 
 .btn-outline{
- @apply px-6 py-3 rounded-full
- border border-white/20;
+ @apply px-6 py-3 rounded-xl border border-cyan-400 text-cyan-400 transition hover:bg-cyan-400 hover:text-black;
 }
 
 
 /* Hero */
 
 .hero{
- @apply min-h-screen flex items-center;
+ @apply min-h-screen flex items-center pt-24;
 }
 
 .hero-grid{
- @apply container grid md:grid-cols-2 gap-12 items-center;
+ @apply container grid md:grid-cols-2 gap-12 items-center mx-20 mt-70;
 }
 
 .hero-title{
@@ -92,8 +94,6 @@ body{
  @apply text-gray-400 leading-8 mb-8 max-w-xl;
 }
 
-/* Hero */
-
 .hero-img{
  @apply w-80 h-80 rounded-full bg-gradient-to-r from-purple-600 to-cyan-500 p-1;
 }
@@ -105,27 +105,15 @@ body{
 /* Sections */
 
 .section{
- @apply py-24;
-}
-
-.section-title{
- @apply text-4xl font-bold text-center mb-4;
-}
-
-.section-sub{
- @apply text-gray-400 text-center mb-16;
-}
-
-.section{
  @apply py-28 px-6;
 }
 
-.section-title{
- @apply text-5xl font-bold text-center mb-4;
-}
-
 .section-sub{
  @apply text-gray-400 text-center mb-16;
+}
+
+.section-title{
+ @apply text-5xl font-bold text-center mb-4 mt-52;
 }
 
 /* About */
@@ -135,38 +123,28 @@ body{
 }
 
 .about-card{
- @apply bg-white/5 border border-white/10
- rounded-3xl p-8 backdrop-blur-md;
+ @apply bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-md;
 }
 
 .about-text{
  @apply text-gray-400 leading-8;
 }
 
-
 /* Skills */
 
 .skills-grid{
- @apply container grid
- grid-cols-2
- md:grid-cols-4
- gap-6;
+  @apply container grid grid-cols-2 md:grid-cols-4 gap-6 ms-20 mt-12;
 }
 
 .skill-card{
- @apply bg-white/5
- border border-white/10
- rounded-2xl
- p-6
- text-center
- hover:scale-105
+ @apply bg-white/5 border border-white/10 rounded-2xl p-6 text-center hover:scale-105
  transition;
 }
 
 /* Projects */
 
 .projects-grid{
- @apply container grid md:grid-cols-2 gap-8;
+ @apply container grid md:grid-cols-2 gap-8 ms-18;
 }
 
 .project-card{
@@ -185,19 +163,10 @@ body{
  @apply flex gap-4;
 }
 
-/* Buttons */
-
-.btn-primary{
- @apply px-6 py-3 rounded-xl bg-cyan-400 text-black font-semibold transition hover:scale-105;
-}
-
-.btn-outline{
- @apply px-6 py-3 rounded-xl border border-cyan-400 text-cyan-400 transition hover:bg-cyan-400 hover:text-black;
-}
 /* Contact */
 
 .contact-box{
- @apply container max-w-3xl bg-white/5 border border-white/10 rounded-3xl p-8;
+ @apply container max-w-3xl bg-white/5 border border-white/10 rounded-3xl p-8 mx-8;
 }
 
 .input{
@@ -215,7 +184,7 @@ body{
 /* Footer */
 
 .footer{
- @apply border-t border-white/10 mt-20;
+ @apply border-t border-white/10 mx-12 mt-20;
 }
 
 .footer-box{
@@ -245,28 +214,6 @@ body{
 
 .scroll-top.show{
  @apply opacity-100 pointer-events-auto;
-}
-
-/* Navbar */
-
-.navbar{
- @apply fixed top-0 left-0 w-full z-50 bg-[#07152d]/80 backdrop-blur-md border-b border-white/10;
-}
-
-.nav-box{
- @apply container flex items-center justify-between py-5;
-}
-
-.logo{
- @apply text-3xl font-bold text-cyan-400;
-}
-
-.resume-btn{
- @apply hidden md:block px-6 py-3 rounded-full bg-cyan-400 text-black font-semibold transition hover:scale-105;
-}
-
-.menu-icon{
- @apply md:hidden text-2xl cursor-pointer;
 }
 
 /* Mobile Menu */
@@ -323,5 +270,4 @@ body{
 100%{
  transform:translateY(0px);
 }
-
 }

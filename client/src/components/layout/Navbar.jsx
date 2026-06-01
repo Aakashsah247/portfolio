@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import resume from "/Users/pabansah/portfolio/client/src/assets/AakashSah.pdf"
 
 const Navbar =() =>{
     const [menu,setMenu] = useState(false);
@@ -14,12 +15,19 @@ const Navbar =() =>{
                 <ul className="nav-links">
                     <li> <a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
 
             {/*resume*/}
-                <button className="resume-btn">Resume</button>
+                <a
+ href={resume}
+ download
+ className="btn-primary glow"
+>
+ Resume
+</a>
                 
 
                 {/* mobile Icons */}
