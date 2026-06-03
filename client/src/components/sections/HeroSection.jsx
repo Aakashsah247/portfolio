@@ -1,6 +1,5 @@
 import {motion} from 'framer-motion';
-import profile from "/Users/pabansah/portfolio/client/src/assets/aakash.jpeg"
-
+import profile from "../../assets/aakash.jpeg";
 
 const HeroSaction = () => {
     return (

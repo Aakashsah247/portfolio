@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import resume from "/Users/pabansah/portfolio/client/src/assets/AakashSah.pdf"
+import resume from "../../assets/AakashSah.pdf";
 
 const Navbar =() =>{
     const [menu,setMenu] = useState(false);
