@@ -63,6 +63,42 @@ This portfolio website is designed to showcase my skills, projects, resume, and 
 - PostgreSQL
 
 ---
+## Frontend Setup
+cd client
+npm install
+npm run dev
+
+## Backend Setup
+cd server
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+
+## Contact Form Flow
+User submits contact form
+        ↓
+React frontend sends request
+        ↓
+FastAPI backend receives data
+        ↓
+SQLAlchemy saves message
+        ↓
+PostgreSQL stores message
+        ↓
+Admin dashboard displays message
+
+## Security Features
+JWT-based admin authentication
+Protected backend admin APIs
+Environment variables for secrets
+CORS configuration
+Admin route protection in frontend
+
+## Author
+
+Aakash Sah
+GitHub: https://github.com/Aakashsah247
+Portfolio: https://aakashsah247.com.np
+
 
 ## Folder Structure
 
@@ -99,38 +135,3 @@ portfolio/
 └── .gitignore
 
 
-## Frontend Setup
-cd client
-npm install
-npm run dev
-
-## Backend Setup
-cd server
-pip install -r requirements.txt
-uvicorn app.main:app --reload
-
-## Contact Form Flow
-User submits contact form
-        ↓
-React frontend sends request
-        ↓
-FastAPI backend receives data
-        ↓
-SQLAlchemy saves message
-        ↓
-PostgreSQL stores message
-        ↓
-Admin dashboard displays message
-
-## Security Features
-JWT-based admin authentication
-Protected backend admin APIs
-Environment variables for secrets
-CORS configuration
-Admin route protection in frontend
-
-## Author
-
-Aakash Sah
-GitHub: https://github.com/Aakashsah247
-Portfolio: https://aakashsah247.com.np
