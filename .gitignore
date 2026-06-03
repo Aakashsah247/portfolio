@@ -19,3 +19,6 @@ uploads/
 
 # logs
 *.log
+
+server/.env
+client/.env

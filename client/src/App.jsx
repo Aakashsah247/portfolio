@@ -1,27 +1,17 @@
-import Navbar from "./components/layout/Navbar"
-import HeroSaction from "./components/sections/HeroSection"
-import AboutSection from "./components/sections/AboutSection"
-import SkillsSection from "./components/sections/SkillsSection"
-import ProjectsSection from "./components/sections/ProjectsSection"
-import ContactSection from "./components/sections/ContactSection"
-import Footer from "./components/sections/Footer"
-import ScrollTop from "./components/common/ScrollTop"
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Admin from "./pages/Admin";
+import AdminLogin from "./pages/AdminLogin"
+import ProtectedRoute from "./routes/ProtectedRoute"
 
 function App() {
   return (
-    <>
-    <Navbar/>
-    <HeroSaction/>
-    <AboutSection/>    
-    <SkillsSection/>
-    <ProjectsSection/>
-    <ContactSection/>
-    <Footer/>
-    <ScrollTop/>
-  
-    </>
-    
-  )
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/admin" element={<Admin />} />
+      <Route path="/admin-login" element={<AdminLogin />}/>
+      <Route path="/admin" element={ <ProtectedRoute> <Admin /></ProtectedRoute>}/>
+    </Routes>
+  );
 }
-
-export default App
+export default App;

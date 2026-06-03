@@ -206,6 +206,11 @@ body{
 .footer-icon{
  @apply transition hover:text-cyan-400 hover:-translate-y-1;
 }
+
+.footer-admin{
+ @apply text-gray-400 text-sm hover:text-cyan-400 transition;
+}
+
 /* Scroll Top */
 
 .scroll-top{
@@ -270,4 +275,93 @@ body{
 100%{
  transform:translateY(0px);
 }
+}
+
+/* Admin */
+
+.msg-grid{
+ @apply container grid gap-6;
+}
+
+.msg-card{
+ @apply bg-white/5
+ border border-white/10
+ rounded-2xl
+ p-6;
+}
+
+/* Admin */
+
+.admin{
+ @apply min-h-screen pt-32 px-6;
+}
+
+.admin-head{
+ @apply container flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-8;
+}
+
+.admin-title{
+ @apply text-4xl font-bold text-cyan-400;
+}
+
+.admin-sub{
+ @apply text-gray-400 mt-2;
+}
+
+.count-box{
+ @apply bg-white/5 border border-white/10 rounded-2xl p-6 text-center min-w-40;
+}
+
+.count-box h2{
+ @apply text-4xl font-bold text-cyan-400;
+}
+
+.count-box p{
+ @apply text-gray-400;
+}
+
+.search{
+ @apply container block w-full bg-white/5 border border-white/10 rounded-xl p-4 mb-8 outline-none;
+}
+
+.search:focus{
+ @apply border-cyan-400;
+}
+
+.table-box{
+ @apply container bg-white/5 border border-white/10 rounded-3xl overflow-x-auto;
+}
+
+.msg-table{
+ @apply w-full text-left;
+}
+
+.msg-table th{
+ @apply p-4 text-cyan-400 border-b border-white/10;
+}
+
+.msg-table td{
+ @apply p-4 text-gray-300 border-b border-white/10;
+}
+
+.del-btn{
+ @apply px-4 py-2 rounded-xl bg-red-500 text-white transition hover:scale-105;
+}
+
+.empty{
+ @apply text-center text-gray-400 py-10;
+}
+
+/* Admin Login */
+
+.login-page{
+ @apply min-h-screen flex items-center justify-center px-6;
+}
+
+.login-box{
+ @apply w-full max-w-md bg-white/5 border border-white/10 rounded-3xl p-8;
+}
+
+.login-title{
+ @apply text-4xl font-bold text-center text-cyan-400 mb-8;
 }
