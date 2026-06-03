@@ -1,5 +1,5 @@
 import { useState } from "react";
-import api from "/Users/pabansah/portfolio/client/src/services/api.js";
+import api from "../../services/api";
 
 const ContactSection = () => {
 
