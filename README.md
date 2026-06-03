@@ -99,17 +99,17 @@ portfolio/
 └── .gitignore
 
 
-Frontend Setup
+## Frontend Setup
 cd client
 npm install
 npm run dev
 
-Backend Setup
+## Backend Setup
 cd server
 pip install -r requirements.txt
 uvicorn app.main:app --reload
 
-Contact Form Flow
+## Contact Form Flow
 User submits contact form
         ↓
 React frontend sends request
@@ -122,14 +122,14 @@ PostgreSQL stores message
         ↓
 Admin dashboard displays message
 
-Security Features
+## Security Features
 JWT-based admin authentication
 Protected backend admin APIs
 Environment variables for secrets
 CORS configuration
 Admin route protection in frontend
 
-Author
+## Author
 
 Aakash Sah
 GitHub: https://github.com/Aakashsah247
