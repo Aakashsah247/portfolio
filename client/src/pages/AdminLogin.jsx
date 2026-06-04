@@ -15,8 +15,8 @@ const handleLogin = async(e) => {
     try{
         setLoading(true)
         const res = await api.post("/login",{
-            username: username,
-            password: password
+            username: username.trim(),
+            password: password.trim()
         })
         localStorage.setItem("adminToken",res.data.access_token)
         navigate("/admin")
