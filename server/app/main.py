@@ -12,33 +12,31 @@ from app.models.contact import Contact
 
 Base.metadata.create_all(bind=engine)
 
-app= FastAPI()
+app = FastAPI()
 
 FRONTEND_URL = os.getenv("FRONTEND_URL", "http://localhost:5173")
 
-origins = [
-    FRONTEND_URL,
-   "http://localhost:5173",
-    "http://127.0.0.1:5173",
-
-    "https://portfolio-apps-kappa.vercel.app",
-    "https://portfolio-apps-aakashsah247s-projects.vercel.app",
-    "https://portfolio-ten-zeta-ni0bll1zmt.vercel.app",
-]
-
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=[
+        FRONTEND_URL,
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        "https://aakashsah247.com.np",
+        "https://www.aakashsah247.com.np"
+    ],
+    allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-
 app.include_router(contact_router)
 app.include_router(auth_router)
 
+
 @app.get("/")
 def root():
-    return {"message": "portfolio API is running"}
-
+    return {
+        "message": "Portfolio API Running"
+    }
